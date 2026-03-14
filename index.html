@@ -19,10 +19,38 @@ background:linear-gradient(135deg,#0f172a,#020617);
 color:#e2e8f0
 }
 
+/* HEADER */
+
 header{
 padding:80px 20px;
 text-align:center;
 background:radial-gradient(circle at top,#1e293b,#020617);
+}
+
+/* PROFILE PHOTO */
+
+.profile-pic{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.profile-pic img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #38bdf8;
+box-shadow:0 0 25px rgba(56,189,248,0.7);
+animation:float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0px);}
 }
 
 h1{
@@ -47,6 +75,8 @@ margin-bottom:20px;
 color:#38bdf8
 }
 
+/* CARDS */
+
 .card{
 background:rgba(30,41,59,0.7);
 padding:30px;
@@ -60,6 +90,8 @@ transition:transform .3s, box-shadow .3s;
 transform:translateY(-8px);
 box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
+
+/* SKILLS */
 
 .skills span{
 display:inline-block;
@@ -77,10 +109,14 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px
 }
 
+/* CONTACT */
+
 .contact a{
 color:#38bdf8;
 text-decoration:none
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -89,6 +125,8 @@ margin-top:40px;
 background:#020617;
 font-size:14px
 }
+
+/* BUTTONS */
 
 .button{
 display:inline-block;
@@ -113,6 +151,10 @@ transform:scale(1.05)
 <body>
 
 <header data-aos="fade-down">
+
+<div class="profile-pic">
+<img src="profile.jpg" alt="Lawinya Gophane">
+</div>
 
 <h1>Lawinya Gophane</h1>
 
@@ -221,14 +263,14 @@ enhance service delivery, improve system reliability, and ensure customer succes
 <p>
 LinkedIn:
 <a href="https://www.linkedin.com/in/lawinya-gophane-5a2468191/" target="_blank">
-https://www.linkedin.com/in/lawinya-gophane-5a2468191/
+linkedin.com/in/lawinya-gophane
 </a>
 </p>
 
 <p>
 Github:
 <a href="https://github.com/Lawinya/" target="_blank">
-https://github.com/Lawinya/
+github.com/Lawinya
 </a>
 </p>
 
