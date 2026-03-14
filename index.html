@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lawinya Gophane | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#0f172a,#020617);
-color:#e2e8f0
+background:#020617;
+color:#e2e8f0;
 }
 
 /* HEADER */
 
 header{
-padding:80px 20px;
+padding:120px 20px;
 text-align:center;
-background:radial-gradient(circle at top,#1e293b,#020617);
+background-image:url('background.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+position:relative;
 }
 
-/* PROFILE PHOTO */
+/* DARK OVERLAY */
+
+header::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:0;
+}
+
+header *{
+position:relative;
+z-index:1;
+}
+
+/* PROFILE IMAGE */
 
 .profile-pic{
 display:flex;
@@ -45,37 +73,41 @@ box-shadow:0 0 25px rgba(56,189,248,0.7);
 animation:float 4s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
+/* FLOATING ANIMATION */
 
 @keyframes float{
+
 0%{transform:translateY(0px);}
 50%{transform:translateY(-12px);}
 100%{transform:translateY(0px);}
+
 }
 
 h1{
 font-size:48px;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .tagline{
 color:#38bdf8;
-font-size:18px
+font-size:18px;
 }
+
+/* CONTAINER */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:40px 20px
+padding:40px 20px;
 }
 
 .section-title{
 font-size:32px;
 margin-bottom:20px;
-color:#38bdf8
+color:#38bdf8;
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
 background:rgba(30,41,59,0.7);
@@ -103,17 +135,37 @@ border-radius:20px;
 font-size:14px;
 }
 
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px
+gap:20px;
 }
 
 /* CONTACT */
 
 .contact a{
 color:#38bdf8;
-text-decoration:none
+text-decoration:none;
+}
+
+/* BUTTONS */
+
+.button{
+display:inline-block;
+margin:10px;
+padding:12px 22px;
+border-radius:25px;
+background:#38bdf8;
+color:#020617;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.08);
 }
 
 /* FOOTER */
@@ -123,29 +175,11 @@ text-align:center;
 padding:25px;
 margin-top:40px;
 background:#020617;
-font-size:14px
-}
-
-/* BUTTONS */
-
-.button{
-display:inline-block;
-margin-top:20px;
-margin-right:10px;
-padding:12px 20px;
-border-radius:25px;
-background:#38bdf8;
-color:#020617;
-font-weight:600;
-text-decoration:none;
-transition:.3s
-}
-
-.button:hover{
-transform:scale(1.05)
+font-size:14px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -181,14 +215,11 @@ GitHub
 <div class="card">
 
 <p>
-Currently working as a <b>Cloud Engineer at SAS</b>, specializing in 
-<b>ServiceNow and cloud-based solutions</b>. I manage incidents, resolve problems, 
-optimize workflows, and provide end-to-end support for cloud applications.
+Currently working as a <b>Cloud Engineer at SAS</b>, specializing in <b>ServiceNow and cloud-based solutions</b>.
 </p>
 
 <p>
-I focus on leveraging <b>ITSM best practices</b> and modern cloud technologies to 
-enhance service delivery, improve system reliability, and ensure customer success.
+I manage incidents, resolve problems, optimize workflows, and provide end-to-end support for cloud applications while following ITSM best practices.
 </p>
 
 </div>
@@ -239,9 +270,9 @@ enhance service delivery, improve system reliability, and ensure customer succes
 
 <div class="card skills">
 
-<span>LINUX</span>
+<span>Linux</span>
 <span>ServiceNow</span>
-<span>POSTMAN API</span>
+<span>Postman API</span>
 <span>Incident Management</span>
 <span>Problem Management</span>
 <span>Workflow Optimization</span>
@@ -263,14 +294,14 @@ enhance service delivery, improve system reliability, and ensure customer succes
 <p>
 LinkedIn:
 <a href="https://www.linkedin.com/in/lawinya-gophane-5a2468191/" target="_blank">
-linkedin.com/in/lawinya-gophane
+View Profile
 </a>
 </p>
 
 <p>
-Github:
+GitHub:
 <a href="https://github.com/Lawinya/" target="_blank">
-github.com/Lawinya
+View Projects
 </a>
 </p>
 
@@ -281,7 +312,9 @@ github.com/Lawinya
 </div>
 
 <footer>
+
 © 2026 Lawinya Gophane
+
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
